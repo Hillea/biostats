@@ -972,10 +972,9 @@ F-statistic:  2451 on 3 and 71029 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2>Assumption checking 2</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="co"># qqPlot(mod$residuals)</span></span>
-<span id="cb33-2"><a></a><span class="fu">check_model</span>(mod, <span class="at">check =</span> <span class="fu">c</span>(<span class="st">"vif"</span>, <span class="st">"qq"</span>, <span class="st">"normality"</span>, <span class="st">"linearity"</span>, <span class="st">"homogeneity"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<span id="cb33-2"><a></a><span class="co"># check_model(mod, check = c("vif", "qq", "normality", "linearity", "homogeneity"))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="W11_GLMinR_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"><p>(Note: the line in the homogeneity plot is missing due to the large amount of data. Check out the textbook for a solution as well as for further information on what these measures mean.)</p>
+<p>(Note: the line in the homogeneity plot is missing due to the large amount of data. Check out the textbook for a solution as well as for further information on what these measures mean.)</p>
 </section>
 <section id="further-analysis-of-interaction" class="slide level2">
 <h2>Further Analysis of Interaction</h2>
@@ -1037,29 +1036,7 @@ Confidence level used: 0.95 </code></pre>
 <h2>Write Up 2</h2>
 <p>You can also use the <code>report()</code> function from the report package to get a suggestion for what to report from your results (it would still need some editing!):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">report</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>We fitted a linear model (estimated using OLS) to predict tot_wellbeing with
-thours_c and male_c (formula: tot_wellbeing ~ thours_c * male_c). The model
-explains a statistically significant and weak proportion of variance (R2 =
-0.09, F(3, 71029) = 2450.89, p &lt; .001, adj. R2 = 0.09). The model's intercept,
-corresponding to thours_c = 0 and male_c = -0.5, is at 44.87 (95% CI [44.78,
-44.96], t(71029) = 1001.87, p &lt; .001). Within this model:
-
-  - The effect of thours c is statistically significant and negative (beta =
--0.77, 95% CI [-0.82, -0.73], t(71029) = -32.96, p &lt; .001; Std. beta = -0.15,
-95% CI [-0.16, -0.15])
-  - The effect of male c [0.5] is statistically significant and positive (beta =
-5.14, 95% CI [5.00, 5.28], t(71029) = 72.25, p &lt; .001; Std. beta = 0.54, 95% CI
-[0.52, 0.55])
-  - The effect of thours c × male c [0.5] is statistically significant and
-positive (beta = 0.45, 95% CI [0.38, 0.52], t(71029) = 12.24, p &lt; .001; Std.
-beta = 0.09, 95% CI [0.08, 0.11])
-
-Standardized parameters were obtained by fitting the model on a standardized
-version of the dataset. 95% Confidence Intervals (CIs) and p-values were
-computed using a Wald t-distribution approximation.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="co"># report(mod)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section id="thanks" class="title-slide slide level1 center">
@@ -1443,7 +1420,7 @@ computed using a Wald t-distribution approximation.</code></pre>
       });
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/Hillea\.github\.io\/biostats\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

@@ -39,6 +39,10 @@ div.cell-output-stdout {
 #| echo: false
 #| messages: false
 
+#install.packages("sfsmisc")
+#install.packages("DiagrammeRsvg")
+#install.packages("rsvg")
+
 library(tidyverse)
 library(ggplot2)
 library(kableExtra)

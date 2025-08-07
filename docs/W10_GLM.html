@@ -1032,10 +1032,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># install.packages("easystats")</span></span>
 <span id="cb13-2"><a></a><span class="fu">library</span>(performance)</span>
 <span id="cb13-3"><a></a></span>
-<span id="cb13-4"><a></a><span class="fu">check_model</span>(lmResultInteraction)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<span id="cb13-4"><a></a><span class="co"># check this function again - not always working</span></span>
+<span id="cb13-5"><a></a><span class="co"># check_model(lmResultInteraction)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="W10_GLM_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"><aside class="notes">
+<aside class="notes">
 <p>We’re not going into detail about all these diagnostics (and hard to see!), but it is always a good idea to run diagnostics/check assumptions for your models!</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1864,7 +1864,7 @@ BIC =  -29.13</code></pre>
       });
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/Hillea\.github\.io\/biostats\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

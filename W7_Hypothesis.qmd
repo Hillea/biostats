@@ -135,6 +135,7 @@ For this example, we sample 250 individuals from the NHANES dataset.
 #| echo: false
 #| fig-align: center
 
+#install.packages("effsize")
 library(ggplot2)
 library(cowplot)
 library(knitr)

@@ -1145,10 +1145,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h2>Assumption Check</h2>
 <p>We can use the <code>check_model()</code> function of the <code>performance</code> package also for LMMs:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">check_model</span>(mod_sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co"># check_model(mod_sim)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="W12_LMM_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"><aside class="notes">
+<aside class="notes">
 <p>Looks good!</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1806,7 +1805,7 @@ P value adjustment: tukey method for comparing a family of 4 estimates </code></
       });
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/Hillea\.github\.io\/biostats\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

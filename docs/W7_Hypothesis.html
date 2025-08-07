@@ -8,7 +8,7 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.4.553">
 
   <meta name="author" content="Dr.&nbsp;Mario Reutter (slides adapted from Dr.&nbsp;Lea Hildebrandt)">
   <title>Biostatistics - 07 Hypothesis Testing</title>
@@ -31,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -223,7 +223,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -394,9 +395,9 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">07 Hypothesis Testing</h1>
-  <p class="subtitle"></p><p>Julius-Maximilians-University Würzburg<br>
+  <p class="subtitle"></p><div class="line-block">Julius-Maximilians-University Würzburg<br>
 Course: “Biostatistics”<br>
-Translational Neuroscience</p><p></p>
+Translational Neuroscience</div><p></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -469,7 +470,7 @@ I.e., we want to know the conditional probability: <span class="math inline">\(P
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-process-of-nhst" class="slide level2">
+<section id="the-process-of-nhst" class="slide level2 scrollable">
 <h2>The Process of NHST</h2>
 <p>To be more precise, we can break down the process of null hypothesis testing in six steps:</p>
 <div>
@@ -570,7 +571,7 @@ The alternative hypothesis (<span class="math inline">\(H_A\)</span>) describes 
 </div>
 
 </div>
-<img data-src="W7_Hypothesis_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch quarto-figure-center"><aside class="notes">
+<img data-src="W7_Hypothesis_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
 <p><span class="math inline">\(BMI &gt; 75 kg/m^2\)</span>?<br>
 → over 243 kg @ 1.8 m height</p>
 <p>Very high but possible</p>
@@ -745,7 +746,7 @@ The alternative hypothesis (<span class="math inline">\(H_A\)</span>) describes 
 <p>The question is: What is the likelihood that we would find a <em>t</em> statistic of this size or more extreme given the number of degrees of freedom and if the true difference between the groups is zero.</p>
 <p>We can use the <em>t</em> distribution to calculate this probability. We just need the degrees of freedom, which are <span class="math inline">\(DF = 241.12\)</span>, and we can then use all these values (e.g.&nbsp;in a function in <code>R</code>):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">pt</span>(<span class="fl">3.86</span>, <span class="at">df=</span><span class="fl">241.12</span>, <span class="at">lower.tail =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">pt</span>(<span class="fl">3.86</span>, <span class="at">df=</span><span class="fl">241.12</span>, <span class="at">lower.tail =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 7.282672e-05</code></pre>
 </div>
@@ -756,7 +757,7 @@ The alternative hypothesis (<span class="math inline">\(H_A\)</span>) describes 
 <h2>P-Value: One- vs.&nbsp;Two-Sided</h2>
 <p>Previously, we calculated the <em>p</em>-Value for a directional hypothesis. In this case, we only looked at the upper tail probability. With a non-directional hypothesis, we would want to account for both tail probabilities, i.e.&nbsp;how likely it is that a <span class="math inline">\(t &gt; 3.86\)</span> OR <span class="math inline">\(t &lt; -3.86\)</span> is found. In this case, we can simply multiply the previous <em>p</em>-Value by 2 (since it is a symmetric distribution):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">pt</span>(<span class="fl">3.86</span>, <span class="at">df=</span><span class="fl">241.12</span>, <span class="at">lower.tail =</span> F) <span class="sc">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">pt</span>(<span class="fl">3.86</span>, <span class="at">df=</span><span class="fl">241.12</span>, <span class="at">lower.tail =</span> F) <span class="sc">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.0001456534</code></pre>
 </div>
@@ -773,34 +774,34 @@ The alternative hypothesis (<span class="math inline">\(H_A\)</span>) describes 
 <section id="p-values-using-randomization" class="slide level2">
 <h2>P-Values using Randomization</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="7|10-13|18|27-28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># create function to shuffle BMI data</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>shuffleBMIstat <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  bmiDataShuffled <span class="ot">&lt;-</span> </span>
-<span id="cb5-4"><a href="#cb5-4"></a>    NHANES_sample <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="fu">select</span>(BMI, PhysActive) <span class="sc">%&gt;%</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb5-7"><a href="#cb5-7"></a>      <span class="at">BMI =</span> <span class="fu">sample</span>(BMI) <span class="co">#randomly shuffle BMI values</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>    )</span>
-<span id="cb5-9"><a href="#cb5-9"></a>  <span class="co"># compute the difference</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>  simResult <span class="ot">&lt;-</span> <span class="fu">t.test</span>( <span class="co">#t.test function is more convenient than pt function!</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>    BMI <span class="sc">~</span> PhysActive,</span>
-<span id="cb5-12"><a href="#cb5-12"></a>    <span class="at">data =</span> bmiDataShuffled,</span>
-<span id="cb5-13"><a href="#cb5-13"></a>  )</span>
-<span id="cb5-14"><a href="#cb5-14"></a>  <span class="fu">return</span>(simResult<span class="sc">$</span>statistic)</span>
-<span id="cb5-15"><a href="#cb5-15"></a>}</span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="co"># run function 10'000 times and save output</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a>nRuns <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a>meanDiffSimDf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">meanDiffSim =</span> <span class="fu">replicate</span>(nRuns, <span class="fu">shuffleBMIstat</span>()))</span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="co">#run t test of actual data</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a>bmtTTest <span class="ot">&lt;-</span> </span>
-<span id="cb5-21"><a href="#cb5-21"></a>  <span class="fu">t.test</span>(</span>
-<span id="cb5-22"><a href="#cb5-22"></a>  BMI <span class="sc">~</span> PhysActive,</span>
-<span id="cb5-23"><a href="#cb5-23"></a>  <span class="at">data =</span> NHANES_sample,</span>
-<span id="cb5-24"><a href="#cb5-24"></a>  <span class="at">alternative =</span> <span class="st">"greater"</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a>)</span>
-<span id="cb5-26"><a href="#cb5-26"></a><span class="co">#compare actual data with simulation</span></span>
-<span id="cb5-27"><a href="#cb5-27"></a>bmiPvalRand <span class="ot">&lt;-</span> </span>
-<span id="cb5-28"><a href="#cb5-28"></a>  <span class="fu">mean</span>(meanDiffSimDf<span class="sc">$</span>meanDiffSim <span class="sc">&gt;=</span> bmtTTest<span class="sc">$</span>statistic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="7|10-13|18|27-28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># create function to shuffle BMI data</span></span>
+<span id="cb5-2"><a></a>shuffleBMIstat <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb5-3"><a></a>  bmiDataShuffled <span class="ot">&lt;-</span> </span>
+<span id="cb5-4"><a></a>    NHANES_sample <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a></a>    <span class="fu">select</span>(BMI, PhysActive) <span class="sc">%&gt;%</span></span>
+<span id="cb5-6"><a></a>    <span class="fu">mutate</span>(</span>
+<span id="cb5-7"><a></a>      <span class="at">BMI =</span> <span class="fu">sample</span>(BMI) <span class="co">#randomly shuffle BMI values</span></span>
+<span id="cb5-8"><a></a>    )</span>
+<span id="cb5-9"><a></a>  <span class="co"># compute the difference</span></span>
+<span id="cb5-10"><a></a>  simResult <span class="ot">&lt;-</span> <span class="fu">t.test</span>( <span class="co">#t.test function is more convenient than pt function!</span></span>
+<span id="cb5-11"><a></a>    BMI <span class="sc">~</span> PhysActive,</span>
+<span id="cb5-12"><a></a>    <span class="at">data =</span> bmiDataShuffled,</span>
+<span id="cb5-13"><a></a>  )</span>
+<span id="cb5-14"><a></a>  <span class="fu">return</span>(simResult<span class="sc">$</span>statistic)</span>
+<span id="cb5-15"><a></a>}</span>
+<span id="cb5-16"><a></a><span class="co"># run function 10'000 times and save output</span></span>
+<span id="cb5-17"><a></a>nRuns <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb5-18"><a></a>meanDiffSimDf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">meanDiffSim =</span> <span class="fu">replicate</span>(nRuns, <span class="fu">shuffleBMIstat</span>()))</span>
+<span id="cb5-19"><a></a><span class="co">#run t test of actual data</span></span>
+<span id="cb5-20"><a></a>bmtTTest <span class="ot">&lt;-</span> </span>
+<span id="cb5-21"><a></a>  <span class="fu">t.test</span>(</span>
+<span id="cb5-22"><a></a>  BMI <span class="sc">~</span> PhysActive,</span>
+<span id="cb5-23"><a></a>  <span class="at">data =</span> NHANES_sample,</span>
+<span id="cb5-24"><a></a>  <span class="at">alternative =</span> <span class="st">"greater"</span></span>
+<span id="cb5-25"><a></a>)</span>
+<span id="cb5-26"><a></a><span class="co">#compare actual data with simulation</span></span>
+<span id="cb5-27"><a></a>bmiPvalRand <span class="ot">&lt;-</span> </span>
+<span id="cb5-28"><a></a>  <span class="fu">mean</span>(meanDiffSimDf<span class="sc">$</span>meanDiffSim <span class="sc">&gt;=</span> bmtTTest<span class="sc">$</span>statistic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="p-values-using-randomization-1" class="slide level2">
@@ -992,7 +993,7 @@ The alternative hypothesis (<span class="math inline">\(H_A\)</span>) describes 
 <h2>CI using the Normal Distribution</h2>
 <p>The critical value are the values of the standard normal distribution that capture 95% (in case of a 95% CI) of the distribution, i.e.&nbsp;the 2.5<sup>th</sup> and 97.5<sup>th</sup> percentile.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">qnorm</span>(<span class="at">p=</span><span class="fu">c</span>(.<span class="dv">025</span>,.<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">qnorm</span>(<span class="at">p=</span><span class="fu">c</span>(.<span class="dv">025</span>,.<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -1.959964  1.959964</code></pre>
 </div>
@@ -1010,7 +1011,7 @@ The alternative hypothesis (<span class="math inline">\(H_A\)</span>) describes 
 <p>If we don’t know the population standard deviation, which is usually the case, it is more appropriate to use the <em>t</em> distribution.</p>
 <p>In this case, we use the critical value of the <em>t</em> distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>), <span class="dv">250</span>) <span class="co">#t distribution depends on sample size! =&gt; n = 250</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">qt</span>(<span class="at">p =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>), <span class="dv">250</span>) <span class="co">#t distribution depends on sample size! =&gt; n = 250</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -1.969498  1.969498</code></pre>
 </div>
@@ -1041,13 +1042,13 @@ The alternative hypothesis (<span class="math inline">\(H_A\)</span>) describes 
 <div class="fragment">
 <p>If we use an R function for bootstrapping (<code>boot()</code>), we get CI estimates that are fairly close to the ones calculated:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>meanWeight <span class="ot">&lt;-</span> <span class="cf">function</span>(df, foo) {</span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">return</span>(<span class="fu">mean</span>(df[foo, ]<span class="sc">$</span>Weight))</span>
-<span id="cb10-3"><a href="#cb10-3"></a>}</span>
-<span id="cb10-4"><a href="#cb10-4"></a>bs <span class="ot">&lt;-</span> <span class="fu">boot</span>(NHANES_sample, meanWeight, <span class="dv">1000</span>)</span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="co"># use the percentile bootstrap</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a>bootci <span class="ot">&lt;-</span> <span class="fu">boot.ci</span>(bs, <span class="at">type =</span> <span class="st">"perc"</span>)</span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="fu">print</span>(bootci)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>meanWeight <span class="ot">&lt;-</span> <span class="cf">function</span>(df, foo) {</span>
+<span id="cb10-2"><a></a>  <span class="fu">return</span>(<span class="fu">mean</span>(df[foo, ]<span class="sc">$</span>Weight))</span>
+<span id="cb10-3"><a></a>}</span>
+<span id="cb10-4"><a></a>bs <span class="ot">&lt;-</span> <span class="fu">boot</span>(NHANES_sample, meanWeight, <span class="dv">1000</span>)</span>
+<span id="cb10-5"><a></a><span class="co"># use the percentile bootstrap</span></span>
+<span id="cb10-6"><a></a>bootci <span class="ot">&lt;-</span> <span class="fu">boot.ci</span>(bs, <span class="at">type =</span> <span class="st">"perc"</span>)</span>
+<span id="cb10-7"><a></a><span class="fu">print</span>(bootci)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS
 Based on 1000 bootstrap replicates
@@ -1320,8 +1321,10 @@ The likelihood of finding a positive result given that it exits!<br>
 <p><strong>Until next week, you should have decided for your research question and hypotheses!</strong></p>
 <p>Next week, we will start with implementing analyses in R.</p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -1351,7 +1354,6 @@ The likelihood of finding a positive result given that it exits!<br>
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1538,42 +1540,80 @@ The likelihood of finding a positive result given that it exits!<br>
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1651,10 +1691,27 @@ The likelihood of finding a positive result given that it exits!<br>
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/Hillea\.github\.io\/biostats\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1664,8 +1721,17 @@ The likelihood of finding a positive result given that it exits!<br>
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1679,7 +1745,11 @@ The likelihood of finding a positive result given that it exits!<br>
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

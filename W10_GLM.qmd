@@ -675,7 +675,8 @@ To check the assumptions, we can easily run a function for model diagnostics (in
 # install.packages("easystats")
 library(performance)
 
-check_model(lmResultInteraction)
+# check this function again - not always working
+# check_model(lmResultInteraction)
 ```
 
 ::: notes

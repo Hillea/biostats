@@ -622,7 +622,7 @@ From the work we've done so far we know that assumptions 1 - 4 are met and we ca
 ```{r}
 #| echo: true
 # qqPlot(mod$residuals)
-check_model(mod, check = c("vif", "qq", "normality", "linearity", "homogeneity"))
+# check_model(mod, check = c("vif", "qq", "normality", "linearity", "homogeneity"))
 ```
 
 (Note: the line in the homogeneity plot is missing due to the large amount of data. Check out the textbook for a solution as well as for further information on what these measures mean.)
@@ -673,7 +673,7 @@ You can also use the `report()` function from the report package to get a sugges
 
 ```{r}
 #| echo: true
-report(mod)
+# report(mod)
 ```
 
 # Thanks!

@@ -8,7 +8,7 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.4.553">
 
   <meta name="author" content="Dr.&nbsp;Mario Reutter (slides adapted from Dr.&nbsp;Lea Hildebrandt)">
   <title>Biostatistics - 04 Data Visualization</title>
@@ -439,7 +439,7 @@ div.cell-output-stdout {
 <p>We will use a package called <code>ggplot2</code> (part of the <code>tidyverse</code>). <code>ggplot2</code> is a very versatile package that allows us to make beautiful, publication-ready(-ish) figures.</p>
 <p><code>ggplot2</code> follows the <a href="https://ggplot2-book.org/mastery">“grammar of graphics” by Leland Wilkinson</a>, a formal guide to visualization principles. A core feature are the <em>layers</em> each plot consists of. The main function to “start” plotting is <code>ggplot()</code> - we will then add layers of data and layers to tweak the appearance.</p>
 
-<img data-src="images/ggplotlayers.PNG" alt="Depiction of how a plot is built up from different layers in ggplot2" width="502" class="r-stretch quarto-figure-center"><p class="caption">Layers of a ggplot</p></section>
+<img data-src="images/ggplotlayers.PNG" width="502" class="r-stretch quarto-figure-center"><p class="caption">Layers of a ggplot</p></section>
 <section id="activity-1-set-up" class="slide level2 scrollable">
 <h2>Activity 1: Set Up</h2>
 <ol type="1">
@@ -1507,7 +1507,7 @@ Levels: low middle high</code></pre>
       });
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/Hillea\.github\.io\/biostats\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

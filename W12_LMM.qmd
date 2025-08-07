@@ -540,7 +540,7 @@ We can use the `check_model()` function of the `performance` package also for LM
 
 ```{r}
 #| echo: true
-check_model(mod_sim)
+# check_model(mod_sim)
 ```
 
 ::: notes

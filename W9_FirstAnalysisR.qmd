@@ -646,12 +646,12 @@ You can even use `report()` to get an automatic suggestion of how to report the 
 ```{r}
 #| echo: true
 
-library(report)
-with(gaze, cor.test(x = baseline, 
-                    y = test, 
-                    method = "pearson", 
-                    alternative = "two.sided")) %>% 
-  report()
+# library(report)
+# with(gaze, cor.test(x = baseline, 
+#                     y = test, 
+#                     method = "pearson", 
+#                     alternative = "two.sided")) %>% 
+#   report()
 ```
 
 ::: notes

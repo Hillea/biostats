@@ -800,22 +800,22 @@ with(NHANES_sample, #only refer to data once using "with" function
 ```
 
 
-<!-- 
+
 . . . 
 
 ```{r}
-p1 <- ggplot(NHANES_sample,aes(RegularMarij,TVHrsNum)) +
-  geom_violin(draw_quantiles=.50) +
-  geom_point(aes(x = RegularMarij, y = mean(TVHrsNum))) +
-  geom_errorbar(aes(ymin = mean(TVHrsNum) - confintr::se_mean(TVHrsNum), ymax = mean(TVHrsNum) + confintr::se_mean(TVHrsNum)), width = .25) +
-  labs(
-    x = "Regular marijuana user",
-    y = "TV hours per day"
-  )
-
-print(p1)
+# p1 <- ggplot(NHANES_sample,aes(RegularMarij,TVHrsNum)) +
+#   geom_violin(draw_quantiles=.50) +
+#   geom_point(aes(x = RegularMarij, y = mean(TVHrsNum))) +
+#   geom_errorbar(aes(ymin = mean(TVHrsNum) - confintr::se_mean(TVHrsNum), ymax = mean(TVHrsNum) + confintr::se_mean(TVHrsNum)), width = .25) +
+#   labs(
+#     x = "Regular marijuana user",
+#     y = "TV hours per day"
+#   )
+# 
+# print(p1)
 ```
--->
+
 
 ::: notes
 DV: continuous, IV: categories

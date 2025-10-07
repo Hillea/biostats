@@ -19,9 +19,9 @@ from: markdown+emoji
 
 # Agenda
 
-- Categorical Relationships (Chi² tests)
-- Continuous Relationships (Correlations)
-- Group Comparisons (t-tests & ANOVA)
+-   Categorical Relationships (Chi² tests)
+-   Continuous Relationships (Correlations)
+-   Group Comparisons (t-tests & ANOVA)
 
 # Modeling *Categorical* Relationships
 
@@ -144,7 +144,7 @@ p1
 
 ## Chi2 Test: Candies
 
-For the candy example, we use a chi-squared distribution with $DFs = 2$ (3 candy categories minus one &rarr; green line). If we'd look at the distribution and found $\chi^2 = .74$ on the x-axis (dashed red line), we would see that it does not fall far into the tail of the distribution but is rather in the middle. If we calculate the *p*-value, we'd get $P(\chi^2 > .74) = 0.691$.
+For the candy example, we use a chi-squared distribution with $DFs = 2$ (3 candy categories minus one → green line). If we'd look at the distribution and found $\chi^2 = .74$ on the x-axis (dashed red line), we would see that it does not fall far into the tail of the distribution but is rather in the middle. If we calculate the *p*-value, we'd get $P(\chi^2 > .74) = 0.691$.
 
 ```{r}
 #| echo: false
@@ -196,11 +196,11 @@ kable(summaryContingencyTable, caption='Contingency table for police search data
 
 If there is no relationship between skin color and being searched, the frequencies of searches would be proportional to the frequencies of skin color. This would be our expected values. We can determine them using probabilities:
 
-|                  | Black       | White       |       |
-|------------------|-------------|-------------|-------|
+|                  | Black            | White            |             |
+|------------------|------------------|------------------|-------------|
 | **Not searched** | $P(\neg S)*P(B)$ | $P(\neg S)*P(W)$ | $P(\neg S)$ |
-| **Searched**     | $P(S)*P(B)$  | $P(S)*P(W)$  | $P(S)$  |
-|                  | $P(B)$       | $P(W)$      |  $100\%$ |
+| **Searched**     | $P(S)*P(B)$      | $P(S)*P(W)$      | $P(S)$      |
+|                  | $P(B)$           | $P(W)$           | $100\%$     |
 
 **Remember**: You can only multiply two probabilities to get their conjoint probability if they are independent. Here, we *assume independence to calculate expected values* and then check how much our observed values *deviate from independence*.
 
@@ -365,8 +365,8 @@ The Simpson's Paradox is a great example of misleading summaries.
 
 If we look at the baseball data below, we see that David Justice has a better batting average in every single year, but Derek Jeter has a better overall batting average:
 
-| Player        | 1995    |          | 1996    |          | 1997    |          | Combined |          |
-|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Player  | 1995    |          | 1996    |          | 1997    |          | Combined |          |
+|---------|---------|----------|---------|----------|---------|----------|----------|----------|
 | Jeter   | 12/48   | .250     | 183/582 | .314     | 190/654 | .291     | 385/1284 | **.300** |
 | Justice | 104/411 | **.253** | 45/140  | **.321** | 163/495 | **.329** | 312/1046 | .298     |
 
@@ -383,9 +383,9 @@ Happens if another (lurking) variable changes across subsets (e.g., the number o
 ::: notes
 batting average: hits/at bats
 
-1995: in general low batting averages, Justice had a lot of at-bats => diminishes total combined value more strongly than for Jeter.
+1995: in general low batting averages, Justice had a lot of at-bats =\> diminishes total combined value more strongly than for Jeter.
 
-1996: both players were above their average but Jeter had way more at-bats => more important for the overall average.
+1996: both players were above their average but Jeter had way more at-bats =\> more important for the overall average.
 :::
 
 ## Simpson's Paradox: More intuitive
@@ -396,7 +396,7 @@ While typing on a keyboard, what is the relationship between speed (words per mi
 
 \
 
-If I try to type faster, I will make more errors &rArr; speed-accuracy trade-off (negative association)
+If I try to type faster, I will make more errors ⇒ speed-accuracy trade-off (negative association)
 
 People who are better at typing usually are both faster and make fewer mistakes (positive association)
 
@@ -409,7 +409,7 @@ Answer: It depends
 -   **Within a person**, the relationship between speed and accuracy is negative. My own skill is limited, I can either use it for speed or accuracy.
 -   **Between persons**, the relationship is positive due to inter-individual differences in overall typing skill.
 
-:::notes
+::: notes
 Usually, when leveling up, people don't put all their skill points in only speed or accuracy.
 :::
 
@@ -487,13 +487,13 @@ Covariance will be far from 0 if data points share a relationship. Positive valu
 
 . . .
 
-Covariance varies with overall level of variance in the data &rArr; hard to compare different relationships
+Covariance varies with overall level of variance in the data ⇒ hard to compare different relationships
 
 . . .
 
 \
 
-**Correlation coefficient** (Pearson correlation): Scales the covariance by the standard deviations of the two variables and thus standardizes it (&rarr; $r$ varies between $-1$ and $1$ &rArr; comparability!)
+**Correlation coefficient** (Pearson correlation): Scales the covariance by the standard deviations of the two variables and thus standardizes it (→ $r$ varies between $-1$ and $1$ ⇒ comparability!)
 
 $$
 r = \frac{covariance}{s_xs_y} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{(N - 1)s_x s_y}
@@ -502,8 +502,8 @@ $$
 ::: notes
 Insight: Variance is the covariance of a variable with itself.
 
-Covariance depends on dataset and even on scaling of variables! \
-e.g. relationship between body height and weight &rArr; Using m vs. cm for height will change variance and thus covariance even though the relationship should be identical (same data)
+Covariance depends on dataset and even on scaling of variables!\
+e.g. relationship between body height and weight ⇒ Using m vs. cm for height will change variance and thus covariance even though the relationship should be identical (same data)
 :::
 
 ## Hypothesis Testing for Correlations
@@ -610,7 +610,7 @@ Without an experiment, we can still collect *observational* data. However, if we
 
 If we have observational data, **causal graphs** can be helpful for interpreting causality:
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
 ```{r}
 #| echo: false
@@ -651,7 +651,7 @@ knitr::include_graphics("images/dag_latent_example.png")
 *Circle*: observed variables\
 *rectangle*: latent (unobservable) variable\
 
-*Green arrow*: positive relationship, \
+*Green arrow*: positive relationship,\
 *red*: negative
 
 *ExamGrade* and *FinishTime* seem negatively related if we ignore other variables!\
@@ -662,7 +662,7 @@ knitr::include_graphics("images/dag_latent_example.png")
 
 If we control for StudyTime (which approximates individual knowledge), we find out that ExamGrade and FinishTime are (causally) unrelated!
 :::
-:::
+:::::
 
 ::: notes
 We have briefly talked about *causation* in week 1
@@ -718,7 +718,7 @@ t.test(x=NHANES_adult$BPDiaAve, mu=80, alternative='greater')
 
 . . .
 
-The observed mean is actually much below 80, providing no evidence for our *directional* alternative hypothesis that it would be greater than 80 &rArr; the *p* values is (rounded to) 1.
+The observed mean is actually much below 80, providing no evidence for our *directional* alternative hypothesis that it would be greater than 80 ⇒ the *p* values is (rounded to) 1.
 
 . . .
 
@@ -799,9 +799,7 @@ with(NHANES_sample, #only refer to data once using "with" function
             alternative = "greater"))
 ```
 
-
-
-. . . 
+. . .
 
 ```{r}
 # p1 <- ggplot(NHANES_sample,aes(RegularMarij,TVHrsNum)) +
@@ -815,7 +813,6 @@ with(NHANES_sample, #only refer to data once using "with" function
 # 
 # print(p1)
 ```
-
 
 ::: notes
 DV: continuous, IV: categories
@@ -928,6 +925,7 @@ df <-
 lmResultAnovaBasic <- lm(sysBP ~ group2, data=df)
 anova(lmResultAnovaBasic)
 ```
+
 The $F$-statistic (also called *omnibus test*) actually tests our overall hypothesis of no difference between conditions.
 
 ## ANOVA in `R`
@@ -940,8 +938,7 @@ summary(lmResultAnovaBasic)
 # emmeans(lmResultAnovaBasic, "group2" ) #run this to get means and CIs for each group
 ```
 
-We can see a $t$-test for every drug against the placebo (remember we used `fct_relevel` for this). 
-The $t$-tests show that drug1 (but not drug2) differs significantly from placebo.
+We can see a $t$-test for every drug against the placebo (remember we used `fct_relevel` for this). The $t$-tests show that drug1 (but not drug2) differs significantly from placebo.
 
 ## ANOVA in `R`: Comments
 
@@ -954,6 +951,7 @@ This complicates things furhter because then you can also have *interactions* be
 
 For these examples, it is helpful to first get an overall statement if a factor (or an interaction of factors) has an influence on the results. If this is the case, you can run the individual t-tests for this factor to get a more detailed look.
 
+````{=html}
 <!--
 ## ANOVA side notes
 In `R`, there are different functions that you can use to run an ANOVA besides `lm()`, which have different advantages and disadvantages (functions like `ezANOVA()` from the `ez` packages or functions from the `afex` package might be helpful).
@@ -983,6 +981,7 @@ $t$-tests: dummy coded = 0 vs. 1\
 $F$: Is our model better than a simple model that just includes the intercept? In this case placebo...
 :::
 -->
+````
 
 # Thanks!
 

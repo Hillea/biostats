@@ -52,8 +52,8 @@ Example: We have two groups (treatment and control). We also have a hypothesis: 
 ::: incremental
 -   We take the hypothesis (treatment = lower X than control) and negate it (Treatment not lower/equal X compared to control). This is our **null hypothesis**.
 
--   Then we look at the data and determine how likely they would be if the null hypothesis were true. \
-I.e., we want to know the conditional probability: $P(Data|H_0)$
+-   Then we look at the data and determine how likely they would be if the null hypothesis were true.\
+    I.e., we want to know the conditional probability: $P(Data|H_0)$
 
 -   If the data are *very unlikely* we reject the null hypothesis in favor of the **alternative hypothesis** (our hypothesis).
 
@@ -217,7 +217,7 @@ ggplot(NHANES_sample,aes(PhysActive,BMI)) +
 
 ::: notes
 $BMI > 75 kg/m^2$?\
-&rarr; over 243 kg @ 1.8 m height
+→ over 243 kg \@ 1.8 m height
 
 Very high but possible
 :::
@@ -242,7 +242,7 @@ In this example, we need a test statistic that tests the difference between two 
 
 $$t = \frac{\bar{X_1} - \bar{X_2}}{\sqrt{\frac{S_1^2}{n_1} + \frac{S_2^2}{n_2}}}$$
 
-$\bar{X_1}$ and $\bar{X_2}$ are the means of the two group, $S_1^2$ and $S_2^2$ are the estimated variances of the groups, \
+$\bar{X_1}$ and $\bar{X_2}$ are the means of the two group, $S_1^2$ and $S_2^2$ are the estimated variances of the groups,\
 $n_1$ and $n_2$ are the sizes of the two groups.
 
 . . .
@@ -302,7 +302,7 @@ We do not check likelihood of the alternative distribution or likelihood that th
 
 *How likely is it, given that we assume* $H_0$ *is true, to observe a statistic at least as extreme as the one we observed.*
 
-&rArr; We need to know the distribution of the expected statistic, assuming $H_0$ is true. Then we can calculate how (un-)likely it is to find the statistic (or a more extreme value) we found in our data.
+⇒ We need to know the distribution of the expected statistic, assuming $H_0$ is true. Then we can calculate how (un-)likely it is to find the statistic (or a more extreme value) we found in our data.
 
 ## Step 5: Determine the Probability of the Observed Result under the Null Hypothesis
 
@@ -414,7 +414,6 @@ Previously, we calculated the *p*-Value for a directional hypothesis. In this ca
 pt(3.86, df=241.12, lower.tail = F) * 2
 ```
 
-
 ## P-Value using Randomization
 
 We can also use our simulation skills to determine the null distribution!
@@ -502,7 +501,7 @@ Traditionally, we reject $H_0$ if the *p*-value is less than **0.05**. (Fisher's
 
 . . .
 
-(Either there is an effect/$H_A$ is true or there is a small chance (5%) that there is actually no effect but we coincidentally found such a large value &rarr; false positive)
+(Either there is an effect/$H_A$ is true or there is a small chance (5%) that there is actually no effect but we coincidentally found such a large value → false positive)
 
 . . .
 
@@ -558,7 +557,7 @@ Nowadays, we often have huge datasets in neuroscience, e.g. collecting brain ima
 
 . . .
 
-Let's look at *genome-wide associations studies* (GWAS). We have more than a million places in where the genome could differ. If we want to know whether *schizophrenia* was associated with *any* of these differences, we would do \~1'000'000 tests! If we simply used $\alpha \le .05$ as a threshold, we would get a lot of ($1'000'000 * .05 = 50'000$ &#128561;) false positives, even if no true effect is present at all.
+Let's look at *genome-wide associations studies* (GWAS). We have more than a million places in where the genome could differ. If we want to know whether *schizophrenia* was associated with *any* of these differences, we would do \~1'000'000 tests! If we simply used $\alpha \le .05$ as a threshold, we would get a lot of ($1'000'000 * .05 = 50'000$ :scream:) false positives, even if no true effect is present at all.
 
 . . .
 
@@ -608,7 +607,7 @@ $$SEM = \frac{\hat{\sigma}}{\sqrt{n}}$$
 
 $n$ is generally under our control ($\hat{\sigma}$ is unknown but fixed\*), and we can thus *decrease* our uncertainty by *increasing* the sample size.
 
-:::aside
+::: aside
 \* In practice, we *can* acquire homogeneous samples (like students) or heterogeneous samples (like extreme groups). This will, however, influence our generalizability.
 :::
 
@@ -721,7 +720,7 @@ $CI = \bar{X} \pm 1.96*SE$
 
 Our mean weight in the NHANES sample was 79.92 kg and the SE was $\frac{SD_{weight}}{\sqrt{n}} = 1.35$ (for a random $n=250$ subsample)\*.
 
-:::aside
+::: aside
 \* In practice, both the mean and standard deviation will be subject to sampling error, i.e., CIs will differ both in location and size despite having the same sample size (cf. plot 2 slides ago)
 :::
 
@@ -773,11 +772,11 @@ print(bootci)
 
 ## CI comparison
 
-| Method | CI |
-|--------|----|
-| normal distribution | [77.28, 82.56] |
-| *t* distribution | [77.15, 82.58] |
-| bootstrap | [78.41, 83.81] |
+| Method              | CI               |
+|---------------------|------------------|
+| normal distribution | \[77.28, 82.56\] |
+| *t* distribution    | \[77.15, 82.58\] |
+| bootstrap           | \[78.41, 83.81\] |
 
 . . .
 
@@ -823,7 +822,7 @@ where $\hat{X_1}$ and $\hat{X_2}$ are the means of the two groups and $s$ is the
 
 $$s = \sqrt{\frac{(n_1 - 1)s^2_1 + (n_2 - 1)s^2_2 }{n_1 +n_2 -2}}$$
 
-which is a combination of both groups' variances ($s_1^2$ and $s_2^2$) weighted by their degrees of freedom \
+which is a combination of both groups' variances ($s_1^2$ and $s_2^2$) weighted by their degrees of freedom\
 ($n_1-1$ and $n_2-1$).
 
 ::: notes
@@ -862,7 +861,7 @@ ggplot(NHANES_sample,aes(x=Height,color=Gender)) +
   theme(legend.position = c(0,0.8))
 ```
 
-:::notes
+::: notes
 Small effect but huge total impact: Psychosocial stress due to Covid-19 (deployed to a whole population)
 :::
 
@@ -942,7 +941,7 @@ The odds ratio of 23.22 tells us that the odds of developing lung cancer in smok
 
 Remember: *Type I* and *Type II error*!
 
-Tolerance for Type I errors set to $\alpha = 0.05$, which is very low &rarr; we want to avoid this error!
+Tolerance for Type I errors set to $\alpha = 0.05$, which is very low → we want to avoid this error!
 
 What about Type II errors?
 

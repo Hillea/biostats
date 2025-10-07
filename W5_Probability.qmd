@@ -420,7 +420,7 @@ How many heads (successes) should we expect and with what probability?
 
 We can simulate 10 coin flips (or dice) each 10.000 times and count the number of heads (out of the 10). We can use this distribution to work out the probability of different outcomes, e.g., getting at least 3 heads (or 6s) out of 10 tosses (dice rolls).
 
-::: columns
+:::::: columns
 ::: column
 ```{r fig.height=3, fig.width=4}
 heads10000 <- replicate(n = 10000, 
@@ -438,7 +438,7 @@ ggplot(data10000, aes(x = heads,y = p)) +
 ```
 :::
 
-::: column
+:::: column
 ::: fragment
 ```{r fig.height=3, fig.width=4}
 dice10000 <- replicate(n = 10000, 
@@ -455,8 +455,8 @@ tibble(heads = dice10000) %>%   # convert to a tibble
   scale_x_continuous(breaks = 0:10)
 ```
 :::
-:::
-:::
+::::
+::::::
 
 ::: notes
 success: whatever you want, also an "artificial" dichotomization like "roll a 6" vs. "roll no 6"
@@ -521,7 +521,7 @@ sample(c("Anna", "Barbara", "Christina", "Dana")) #by default, sample draws all 
 
 . . .
 
-::: columns
+::::: columns
 ::: column
 -   `dbinom()`: the **density distribution** gives you the probability of **exactly** $x_i$ successes given the number of trials and the probability of success on a single trial: $P(X = x_i)$ (e.g., what's the probability of flipping 8/10 heads with a fair coin?)
 
@@ -556,7 +556,7 @@ ggplot(binomData, aes(x = heads,y = p_cum)) +
 ncol=1)
 ```
 :::
-:::
+:::::
 
 ::: notes
 1.  What's the probability of getting exactly 5 heads on 10 flips?

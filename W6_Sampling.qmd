@@ -72,7 +72,7 @@ Of course, we want to minimize the sampling error and get a good estimate of the
 
 Let's use the NHANES dataset again and let's assume it is the entire population. We can calculate the mean ($\mu = 168.35$) and standard deviation ($\sigma = 10.16$) as the population parameters. If we *repeatedly* sample 50 individuals, we get this:
 
-::: {.columns .incremental}
+::::: {.columns .incremental}
 ::: {.column width="50%"}
 ```{r}
 #| echo: false
@@ -147,7 +147,7 @@ sampMeans_df %>%
   )
 ```
 :::
-:::
+:::::
 
 . . .
 
@@ -538,7 +538,7 @@ The **bootstrap** is a simulation technique that allows us to quantify our *unce
 
 Let's use the bootstrap to estimate the sampling distribution of the mean heights of the NHANES dataset. We can then compare the result to the SEM (=uncertainty of the mean) that we discussed earlier.
 
-::: columns
+::::: columns
 ::: colum
 ```{r}
 #| echo: true
@@ -584,11 +584,11 @@ tibble(bootMeans=bootMeans) %>%
 
 ```
 :::
-:::
+:::::
 
 ## Evaluation: Bootstrapping
 
-::: columns
+::::: columns
 ::: column
 **Con**\
 Takes very long to compute (compared to the SEM)\
@@ -600,7 +600,7 @@ Precision depends on computing time
 No assumption about sampling distribution necessary\
 Is a good solution if you do not want to rely on certain assumptions
 :::
-:::
+:::::
 
 . . .
 

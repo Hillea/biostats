@@ -4,7 +4,7 @@ subtitle: |
    | Julius-Maximilians-University Würzburg 
    | Course: "Biostatistics"    
    | Translational Neuroscience
-author: "Dr. Mario Reutter (slides adapted from Dr. Lea Hildebrandt)"
+author: "Dr. Lea Hildebrandt"
 format: 
   revealjs:
     smaller: true
@@ -84,11 +84,11 @@ print("Hello World")
 
 -   The course will take place in person
 
-    -   Only for students who are not in Würzburg yet, there is an option via Zoom
+    -   Only for students who are not in Würzburg yet, there is the option to watch pre-recorded videos
 
 . . .
 
--   We will use these textbooks (Open Educational Resources - freely available online, also linked in WueCampus):
+-   We will use these textbooks (Open Educational Resources - freely available online, also linked on WueCampus):
 
     -   [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/index.html)
 
@@ -104,7 +104,7 @@ print("Hello World")
 -   Input (lecture style) with hands-on R sessions <!-- -   Input could be video based that you should watch before the (R) session -->
 -   In addition, you should read a few pages in the text books\
     (<a href="https://statsthinking21.github.io/statsthinking21-core-site/">Statistical Thinking for the 21st Century</a>, and possibly <a href="https://psyteachr.github.io/quant-fun-v2/">Fundamentals of Quantitative Analysis</a>)
--   Project: Independently analyze a dataset (exam with pass or fail grading)
+-   Project: Independently analyze a dataset and hand in a report (exam with pass or fail grading)
 :::
 
 ::: notes
@@ -139,11 +139,10 @@ Slides might be text heavy → so that you can go through the slides afterwards 
 
 ## Schedule {.scrollable .smaller}
 
-The up-to-date version can be found at <https://spressi.github.io/biostats/>
-
+The up-to-date version can be found at <https://hillea.github.io/biostats/>.
 
 | Session | Date | Topic | Reading | Project Deadlines |
-|--------------|--------------|----------------|--------------|-----------------|
+|----|----|----|----|----|
 |  | 14.10. | *No class* |  | Read chapters and install software |
 | 01 | 21.10. | General & R Intro | ST21: 1-3, QF: 1-3 | R & RStudio installed |
 | 02 | 28.10. | Models | ST21: 4, QF: 4-6 |  |

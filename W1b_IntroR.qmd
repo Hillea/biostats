@@ -4,7 +4,7 @@ subtitle: |
    | Julius-Maximilians-University Würzburg 
    | Course: "Biostatistics"    
    | Translational Neuroscience
-author: "Dr. Mario Reutter (slides adapted from Dr. Lea Hildebrandt)"
+author: "Dr. Lea Hildebrandt"
 format: 
   revealjs:
     smaller: true
@@ -50,14 +50,6 @@ print("Hello World")
 \
 Remember: You can navigate through the slides quickly by clicking on the three dashes in the bottom left.
 
-. . .
-
-\
-\
-**At Home**
-
-If possible, use two screens with the slides (Zoom) opened on one and RStudio on the other
-
 ## Why write code?
 
 ::: {.incremental .smaller}
@@ -74,7 +66,7 @@ If possible, use two screens with the slides (Zoom) opened on one and RStudio on
     -   reproducible!
 
 -   Science/Academia is a marathon and not a sprint\
-    &rArr; it is worthwhile investing in skills with a slow learning curve that will pay off in the long run
+    ⇒ it is worthwhile investing in skills with a slow learning curve that will pay off in the long run
 :::
 
 ::: notes
@@ -90,7 +82,7 @@ Chat: What are advantages (or disadvantages!) of coding?
 -   You will learn a new (programming) language. Don't expect to "speak" it fluently right away.
 -   During class, it is more important that you can roughly comprehend written code and "translate" it into natural language.
 -   The second step is to be able to make small adjustments to code that is given to you.
--   Only then, the last step is to be able to produce code yourself (with the help of Google, Stackoverflow, templates of this course, etc. :) ).
+-   Only then, the last step is to be able to produce code yourself (with the help of Google, Stackoverflow, *chatgpt*, templates of this course, etc. :) ).
 -   But: Use it or loose it! Don't wait to use `R` in your research projects until you're "good enough". It's more fun to use it on "actual" problems, and makes it much easier to learn.
 
 ## Install R & RStudio
@@ -107,7 +99,7 @@ open R!
 
 ## RStudio Panes
 
-::: columns
+:::::: columns
 ::: {.column .smaller width="40%"}
 1.  Script pane: view, edit, & save your code
 
@@ -124,7 +116,7 @@ open R!
 ::: {.column width="50%"}
 ![RStudio Interface](images/rstudio2.png)
 :::
-:::
+::::::
 
 ::: notes
 Console vs. Script (Rmarkdown later)
@@ -142,14 +134,14 @@ Console vs. Script (Rmarkdown later)
 sqrt(9)
 ```
 
-![Console used as calculator](images/console.png){fig-alt="Calculated 100+1, 2*3, square root of 9 directly in the console" width=60%}
+![Console used as calculator](images/Console.jpg){fig-alt="Calculated 100+1, 2*3, square root of 9 directly in the console"}
 
 ::: notes
 try it out!
 
 We can't really do much with these values, they will just be written in the console.
 
-Also: Notice that you have the option to include spaces are not between commands, i.e., `100 + 1` vs. `100+1`.
+Also: Notice that you have the option to include spaces between commands, i.e., `100 + 1` vs. `100+1`.
 :::
 
 ## Saving the Results as a Variable/Object
@@ -168,10 +160,10 @@ word <- "Hello"
 
 <br>
 
-::: {.incremental}
+::: incremental
 -   `<-` is used to assign values to variables (`=` is also possible, but discouraged in `R`)
 
--   `a`, `multi` etc. are the variable names <span style="font-size: 16px;">(some naming rules, e.g., no whitespace, must not start with a number, many special characters not allowed)</span>
+-   `a`, `multi` etc. are the variable names [(some naming rules, e.g., no whitespace, must not start with a number, many special characters not allowed)]{style="font-size: 16px;"}
 
     -   You can find those now in your Environment! (top right panel)
     -   No feedback in the console for saving variables (`2*3` outputs `6`, but `multi <- 2*3` doesn't)
@@ -206,7 +198,7 @@ multi
 
 <br><br>
 
-::: {.incremental}
+::: incremental
 -   You can use those variables for further calculations, e.g., `a + multi`
 -   Note that neither `a` nor `multi` change their value.
 :::
@@ -340,18 +332,18 @@ possibly necessary to install Rtools!
 
 ## New Project
 
-![](images/rstudioProject.png){width=200% fig-align="center"}
+![](images/rstudioProject.png){width="200%" fig-align="center"}
 
-::: {.incremental}
-- Create a new project by clicking on "*File*" on the top left and then "*New Project...*"
-- Select "*New Directory*" <span style="font-size: 16px">(if you already have a folder for this course, you can choose "*Existing directory*" and select that folder)</span> and then choose "*New Project*" at the top of the list.
-- Choose a project name, e.g., as "*Biostats*" (this will create a folder in which the project lives)
-- Browse where you want to put your project folder (e.g., "*D:/Documents/Studies/Translational Neuroscience/*")
+::: incremental
+-   Create a new project by clicking on "*File*" on the top left and then "*New Project...*"
+-   Select "*New Directory*" [(if you already have a folder for this course, you can choose "*Existing directory*" and select that folder)]{style="font-size: 16px"} and then choose "*New Project*" at the top of the list.
+-   Choose a project name, e.g., as "*Biostats*" (this will create a folder in which the project lives)
+-   Browse where you want to put your project folder (e.g., "*D:/Documents/Studies/Translational Neuroscience/*")
 :::
 
 . . .
 
-<span style="font-size: 16px">PS: `R` can deal with folder and file names that contain spaces, but since some programms can't, it's best practice not to use whitespaces for file/folder naming.</span>
+[PS: `R` can deal with folder and file names that contain spaces, but since some programms can't, it's best practice not to use whitespaces for file/folder naming.]{style="font-size: 16px"}
 
 ## Existing Projects
 
@@ -365,14 +357,14 @@ You can also just double click on `.Rproj` files and RStudio will open with the 
 
 ## Why Projects
 
-- Projects are not only convenient for us (e.g., scripts that we had opened before are re-opened when we open the project), they are also great for reproducibility.
-- We won't cover the details here - see the "Further Reading" section of the course page!
+-   Projects are not only convenient for us (e.g., scripts that we had opened before are re-opened when we open the project), they are also great for reproducibility.
+-   We won't cover the details here - see the "Further Reading" section of the course page!
 
 ## Using Scripts
 
 To open a new script, click **File** $\to$ **New File** $\to$ **R Script.** (`Ctrl + Shift + N`)
 
-To run a line of the script, you can either click *Run* at the top right of the pane or `Ctrl + Enter`. It will run the code that is highlighted/selected or automatically select the current line (or the complete multi-line command). \
+To run a line of the script, you can either click *Run* at the top right of the pane or `Ctrl + Enter`. It will run the code that is highlighted/selected or automatically select the current line (or the complete multi-line command).\
 To run the whole script/chunk, press `Ctrl + Shift + Enter` (with full console output) or `Ctrl + Shift + S` (limited output).
 
 ![Using scripts](images/rstudioScript.png)
@@ -387,7 +379,7 @@ Now run the code (either by pressing "run" at the top right of the script or `ct
 
 # Vectors
 
-::: {.incremental}
+::: incremental
 -   So far, we've worked with single values; *vectors* contain several elements.
 :::
 
@@ -402,7 +394,7 @@ c(2, 6.1, 9.234, 1.23)
 c("hello", "cake", "biscuit")
 ```
 
-::: {.incremental}
+::: incremental
 -   Vectors always contain the same data type (It's a bit tricky, but can you see why `c(10, "biscuit", 2.31)` does not work?).
 -   Vectors are always wrapped in the `c()` function ("combine").
 :::
@@ -508,7 +500,7 @@ That's the lesson on "Getting started with R"! If you have any questions, feel f
 **Managing expectations**: You are learning a new (programming) language. You won't "speak" it fluently right away. As long as you roughly understand what a piece of code is supposed to be doing, you will be fine. Writing code usually is a lot of trial and error before it works completely.
 
 \
-Next: 
+Next:
 
 -   Theory: Models
 -   R: Data Wrangling

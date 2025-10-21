@@ -6,6 +6,14 @@ Welcome to the website of the course "Biostatistics" of the master's programme "
 
 Please use the navigation on the left to select the slides for each session (recommendation: Open in new tab).
 
+We will use the following textbooks:
+
+-   ST21: [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/index.html)
+
+-   QF: [Fundamentals of Quantitative Data Analysis](https://psyteachr.github.io/quant-fun-v2/)
+
+## Schedule
+
 | Session | Date | Topic | Reading | Project Deadlines |
 |---------------|---------------|---------------|---------------|---------------|
 |  | 14.10. | *No class* |  | Read chapters and install software |

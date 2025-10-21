@@ -984,7 +984,7 @@
     "href": "W5_Probability.html#using-the-uniform-distribution",
     "title": "05 Probability",
     "section": "Using the Uniform Distribution",
-    "text": "Using the Uniform Distribution\nWe can use runif for a uniform distribution of continuous (numerical) values or\nsample for a uniform distribution of discrete (numerical or text) values.\n\nDraw a random decimal number between 0 and 1\nDraw 100 random decimal numbers between 0 and 10 and calculate their mean.\nDraw 50 random integer numbers between 1 and 10 and calculate their mean.\nDraw who may have the first turn during board game night: Anna, Barbara, Christina, or Dana.\nProduce a random order of all the names of Anna, Barbara, Christina, and Dana.\n\n\n\n#1\nrunif(n=1) #default parameters are already set to min=0 and max=1\n\n[1] 0.4142497\n\n#2\nrunif(n=100, max=10) %&gt;% mean()\n\n[1] 5.30181\n\n#3\nsample(1:10, size=50, replace=T) %&gt;% mean()\n\n[1] 5.24\n\n#4\nsample(c(\"Anna\", \"Barbara\", \"Christina\", \"Dana\"), size=1)\n\n[1] \"Dana\"\n\n#5\nsample(c(\"Anna\", \"Barbara\", \"Christina\", \"Dana\")) #by default, sample draws all elements in random order\n\n[1] \"Dana\"      \"Anna\"      \"Barbara\"   \"Christina\"",
+    "text": "Using the Uniform Distribution\nWe can use runif for a uniform distribution of continuous (numerical) values or\nsample for a uniform distribution of discrete (numerical or text) values.\n\nDraw a random decimal number between 0 and 1\nDraw 100 random decimal numbers between 0 and 10 and calculate their mean.\nDraw 50 random integer numbers between 1 and 10 and calculate their mean.\nDraw who may have the first turn during board game night: Anna, Barbara, Christina, or Dana.\nProduce a random order of all the names of Anna, Barbara, Christina, and Dana.\n\n\n\n#1\nrunif(n=1) #default parameters are already set to min=0 and max=1\n\n[1] 0.4100448\n\n#2\nrunif(n=100, max=10) %&gt;% mean()\n\n[1] 5.004418\n\n#3\nsample(1:10, size=50, replace=T) %&gt;% mean()\n\n[1] 5.06\n\n#4\nsample(c(\"Anna\", \"Barbara\", \"Christina\", \"Dana\"), size=1)\n\n[1] \"Christina\"\n\n#5\nsample(c(\"Anna\", \"Barbara\", \"Christina\", \"Dana\")) #by default, sample draws all elements in random order\n\n[1] \"Dana\"      \"Anna\"      \"Christina\" \"Barbara\"",
     "crumbs": [
       "05 Probability"
     ]
@@ -1244,7 +1244,7 @@
     "href": "W3_DataWranglingR.html#create-new-variables-2",
     "title": "03 Data Wrangling",
     "section": "Create New Variables 2",
-    "text": "Create New Variables 2\n\nCreate a variable that denotes the decade a baby was born:\n\n\n\n# we can only use floor to round down to full numbers =&gt; divide year by 10, floor it, and then multiply by 10 again\nbaby_decades &lt;- \n  babynames %&gt;% \n  mutate(decade = floor(year / 10) * 10) # round(year, -1) works but not floor(year, -1) :(\n\n\n\n# A tibble: 10 × 2\n    year decade\n   &lt;dbl&gt;  &lt;dbl&gt;\n 1  1891   1890\n 2  1898   1890\n 3  1901   1900\n 4  1926   1920\n 5  1931   1930\n 6  1940   1940\n 7  1948   1940\n 8  1981   1980\n 9  2002   2000\n10  2003   2000",
+    "text": "Create New Variables 2\n\nCreate a variable that denotes the decade a baby was born:\n\n\n\n# we can only use floor to round down to full numbers =&gt; divide year by 10, floor it, and then multiply by 10 again\nbaby_decades &lt;- \n  babynames %&gt;% \n  mutate(decade = floor(year / 10) * 10) # round(year, -1) works but not floor(year, -1) :(\n\n\n\n# A tibble: 10 × 2\n    year decade\n   &lt;dbl&gt;  &lt;dbl&gt;\n 1  1899   1890\n 2  1916   1910\n 3  1942   1940\n 4  1958   1950\n 5  1962   1960\n 6  1974   1970\n 7  1986   1980\n 8  1993   1990\n 9  1994   1990\n10  2002   2000",
     "crumbs": [
       "03 Data Wrangling"
     ]
@@ -2424,7 +2424,7 @@
     "href": "index.html",
     "title": "Biostatistics",
     "section": "",
-    "text": "Welcome to the website of the course “Biostatistics” of the master’s programme “Translational Neuroscience” of the Julius-Maximilians-University Würzburg.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab).\n\n\n\n\n\n\n\n\n\n\nSession\nDate\nTopic\nReading\nProject Deadlines\n\n\n\n\n\n14.10.\nNo class\n\nRead chapters and install software\n\n\n01\n21.10.\nGeneral & R Intro\nST21: 1-3, QF: 1-3\nR & RStudio installed\n\n\n02\n28.10.\nModels\nST21: 4, QF: 4-6\n\n\n\n03\n04.11.\nData Wrangling\nST21: 4, QF: 4-6\n\n\n\n04\n11.11.\nData Visualization\nQF: 7\n\n\n\n05\n18.11.\nProbability\nST21: 7-8, QF: 8\nDataset\n\n\n06\n25.11.\nSampling\nST21: 7-8, QF: 8\n\n\n\n07\n02.12.\nHypothesis Testing\nST21: 9-10\n\n\n\n08\n09.12.\nComparing Means & Categories\nST21: 12, 15\nResearch Question & Hypotheses\n\n\n09\n16.12.\nExercises (t-Tests, Chi²)\nST21: 12, 15\n\n\n\n10\n23.12.\n(General) Linear Models\nST21: 12-13\nFirst Analysis Ideas\n\n\n\n30.12. & 06.01.\nHolidays\n\n\n\n\n11\n13.01.\nExercises (GLM)\nST21: 12-13\n\n\n\n12\n20.01.\nLinear Mixed Models\nST21: 14\nAnalysis (with R scripts)\n\n\n13\n27.01.\nR Markdown for Reports\n\n\n\n\n14\n03.02.\nTroubleshooting Your Report\n\nSend Questions via Email\n\n\n\n10.02.\nReproducible Research\nST21: 18\nReport (with R Markdown)"
+    "text": "Welcome to the website of the course “Biostatistics” of the master’s programme “Translational Neuroscience” of the Julius-Maximilians-University Würzburg.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab).\nWe will use the following textbooks:"
   },
   {
     "objectID": "W11_GLMinR.html#setup",
@@ -2781,7 +2781,7 @@
     "href": "W13_RMarkdown.html#your-second-r-markdown-script",
     "title": "13 R Markdown",
     "section": "Your Second R Markdown Script",
-    "text": "Your Second R Markdown Script\n\nUse one of the two methods described before to include the R analysis for your report into an R Markdown document.\nOutput the content of any variable of your R script and include it as inline code in some text (Cheat Sheet).\n\n\n```{r}\ndata = tibble(rt = rnorm(n=100, mean=.5, sd=.2))\n```\nWe observed an average reaction time of `r data %&gt;% pull(rt) %&gt;% mean() %&gt;% signif(digits=3)` seconds.\nWe observed an average reaction time of 0.504 seconds.\n\nKnit the document and open the output with a double click.",
+    "text": "Your Second R Markdown Script\n\nUse one of the two methods described before to include the R analysis for your report into an R Markdown document.\nOutput the content of any variable of your R script and include it as inline code in some text (Cheat Sheet).\n\n\n```{r}\ndata = tibble(rt = rnorm(n=100, mean=.5, sd=.2))\n```\nWe observed an average reaction time of `r data %&gt;% pull(rt) %&gt;% mean() %&gt;% signif(digits=3)` seconds.\nWe observed an average reaction time of 0.493 seconds.\n\nKnit the document and open the output with a double click.",
     "crumbs": [
       "13 R Markdown"
     ]
@@ -3531,7 +3531,7 @@
     "href": "W6_Sampling.html#example-sampling-distribution",
     "title": "06 Sampling and Resampling/Simulations",
     "section": "Example Sampling Distribution",
-    "text": "Example Sampling Distribution\nLet’s use the NHANES dataset again and let’s assume it is the entire population. We can calculate the mean (\\(\\mu = 168.35\\)) and standard deviation (\\(\\sigma = 10.16\\)) as the population parameters. If we repeatedly sample 50 individuals, we get this:\n\n\n\n\n\n\n\nsampleMean\nsampleSD\n\n\n\n\n168.774\n9.891345\n\n\n167.674\n8.169725\n\n\n167.386\n10.753680\n\n\n167.754\n8.697647\n\n\n170.180\n10.206101\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe sample means and SDs are similar, but not exactly equal to the population parameters.\nIf we sample 5000 times (50 individuals each), we can see that the average of these 5000 sample means (depicted in blue) is similar to the population mean!\nAverage sample mean across 5000 sample: \\(\\hat{X} = 168.3463\\).\n\ngrey = population histogram (raw data) blue = sample means of samples with N=50\nWhat is similar between these distributions? What is different?",
+    "text": "Example Sampling Distribution\nLet’s use the NHANES dataset again and let’s assume it is the entire population. We can calculate the mean (\\(\\mu = 168.35\\)) and standard deviation (\\(\\sigma = 10.16\\)) as the population parameters. If we repeatedly sample 50 individuals, we get this:\n\n\n\n\n\n\n\nsampleMean\nsampleSD\n\n\n\n\n168.468\n8.789963\n\n\n169.484\n9.593054\n\n\n168.804\n11.193602\n\n\n167.804\n10.836220\n\n\n170.222\n10.569619\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe sample means and SDs are similar, but not exactly equal to the population parameters.\nIf we sample 5000 times (50 individuals each), we can see that the average of these 5000 sample means (depicted in blue) is similar to the population mean!\nAverage sample mean across 5000 sample: \\(\\hat{X} = 168.3463\\).\n\ngrey = population histogram (raw data) blue = sample means of samples with N=50\nWhat is similar between these distributions? What is different?",
     "crumbs": [
       "06 Sampling and Resampling/Simulations"
     ]
@@ -3641,7 +3641,7 @@
     "href": "W6_Sampling.html#using-monte-carlo-simulations-3",
     "title": "06 Sampling and Resampling/Simulations",
     "section": "Using Monte Carlo Simulations 3",
-    "text": "Using Monte Carlo Simulations 3\n\nCombine the results across many repetitions.\n\n\nnrep &lt;- 5000 #number of repetitions\n\n# initialize an empty matrix to fill in the max values later\nmax_rand_num &lt;- matrix(data = NA, nrow = nrep, ncol=1)\n\n# use a for-loop to repeat resampling nrep times!\nfor (i in 1:nrep) {\n  rand_num &lt;- rnorm(n = 150, mean = 5, sd = 1)\n  max_rand_num[i, 1] &lt;- max(rand_num)\n}\n\n# get the cutoff (99%) of the distribution of max values\ncutoff &lt;- quantile(max_rand_num, 0.99)\nprint(cutoff)\n\n     99% \n8.826355",
+    "text": "Using Monte Carlo Simulations 3\n\nCombine the results across many repetitions.\n\n\nnrep &lt;- 5000 #number of repetitions\n\n# initialize an empty matrix to fill in the max values later\nmax_rand_num &lt;- matrix(data = NA, nrow = nrep, ncol=1)\n\n# use a for-loop to repeat resampling nrep times!\nfor (i in 1:nrep) {\n  rand_num &lt;- rnorm(n = 150, mean = 5, sd = 1)\n  max_rand_num[i, 1] &lt;- max(rand_num)\n}\n\n# get the cutoff (99%) of the distribution of max values\ncutoff &lt;- quantile(max_rand_num, 0.99)\nprint(cutoff)\n\n    99% \n8.75769",
     "crumbs": [
       "06 Sampling and Resampling/Simulations"
     ]
@@ -3651,7 +3651,7 @@
     "href": "W6_Sampling.html#using-monte-carlo-simulations-4",
     "title": "06 Sampling and Resampling/Simulations",
     "section": "Using Monte Carlo Simulations 4",
-    "text": "Using Monte Carlo Simulations 4\n\nThis shows that the 99th percentile of the finishing time distribution falls at 8.8401628 minutes, meaning that if we were to give that much time for the quiz, then we expect that in 99% of quizzes, every student would finish.\n\nAssumptions matter, otherwise results wrong! (We assumed: normal dist w/ particular mean and SD). Here assumptions certainly wrong –&gt; elapsed time not normal",
+    "text": "Using Monte Carlo Simulations 4\n\nThis shows that the 99th percentile of the finishing time distribution falls at 8.8472985 minutes, meaning that if we were to give that much time for the quiz, then we expect that in 99% of quizzes, every student would finish.\n\nAssumptions matter, otherwise results wrong! (We assumed: normal dist w/ particular mean and SD). Here assumptions certainly wrong –&gt; elapsed time not normal",
     "crumbs": [
       "06 Sampling and Resampling/Simulations"
     ]
@@ -3671,7 +3671,7 @@
     "href": "W6_Sampling.html#bootstrap-example",
     "title": "06 Sampling and Resampling/Simulations",
     "section": "Bootstrap Example",
-    "text": "Bootstrap Example\nLet’s use the bootstrap to estimate the sampling distribution of the mean heights of the NHANES dataset. We can then compare the result to the SEM (=uncertainty of the mean) that we discussed earlier.\n\n\n\n# perform the bootstrap to compute SEM and compare to parametric method\nnRuns &lt;- 2500\nsampleSize &lt;- 32\n\nheightSample &lt;- \n  NHANES_adult %&gt;%\n  sample_n(sampleSize) # draw 32 observations\n\n# function to bootstrap (sample w/ replacement) & get mean\nbootMeanHeight &lt;- function(df) {\n  bootSample &lt;- sample_n(df, dim(df)[1], replace = TRUE)\n  return(mean(bootSample$Height))\n}\n\n# run function 2500x\nbootMeans &lt;- replicate(nRuns, bootMeanHeight(heightSample))\n\n# calculate \"normal\" SEM and bootstrap SEM\nSEM_standard &lt;- sd(heightSample$Height) / sqrt(sampleSize)\nSEM_bootstrap &lt;- sd(bootMeans)\n\nSEM_standard\n\n[1] 1.566907\n\nSEM_bootstrap\n\n[1] 1.543625\n\n\n\n\n\n\n\n\nAn example of bootstrapping to compute the standard error of the mean adult height in the NHANES dataset. The histogram shows the distribution of means across bootstrap samples, while the red line shows the normal distribution based on the sample mean and standard deviation.",
+    "text": "Bootstrap Example\nLet’s use the bootstrap to estimate the sampling distribution of the mean heights of the NHANES dataset. We can then compare the result to the SEM (=uncertainty of the mean) that we discussed earlier.\n\n\n\n# perform the bootstrap to compute SEM and compare to parametric method\nnRuns &lt;- 2500\nsampleSize &lt;- 32\n\nheightSample &lt;- \n  NHANES_adult %&gt;%\n  sample_n(sampleSize) # draw 32 observations\n\n# function to bootstrap (sample w/ replacement) & get mean\nbootMeanHeight &lt;- function(df) {\n  bootSample &lt;- sample_n(df, dim(df)[1], replace = TRUE)\n  return(mean(bootSample$Height))\n}\n\n# run function 2500x\nbootMeans &lt;- replicate(nRuns, bootMeanHeight(heightSample))\n\n# calculate \"normal\" SEM and bootstrap SEM\nSEM_standard &lt;- sd(heightSample$Height) / sqrt(sampleSize)\nSEM_bootstrap &lt;- sd(bootMeans)\n\nSEM_standard\n\n[1] 1.631241\n\nSEM_bootstrap\n\n[1] 1.572762\n\n\n\n\n\n\n\n\nAn example of bootstrapping to compute the standard error of the mean adult height in the NHANES dataset. The histogram shows the distribution of means across bootstrap samples, while the red line shows the normal distribution based on the sample mean and standard deviation.",
     "crumbs": [
       "06 Sampling and Resampling/Simulations"
     ]
@@ -3701,7 +3701,7 @@
     "href": "W6_Sampling.html#resampling-3",
     "title": "06 Sampling and Resampling/Simulations",
     "section": "Resampling 3",
-    "text": "Resampling 3\nLet’s resample 1000 times. To get the sampling distributions of the means, we have to save each mean of each iteration:\n\nset.seed(8465123)\niterations &lt;- 1000 \n\n# initialize empty matrices\nmean_bootstrap_10 &lt;- matrix(NA, nrow = iterations, ncol = 1)\nmean_bootstrap_20 &lt;- matrix(NA, nrow = iterations, ncol = 1)\n\nfor (i in 1:iterations) {\n  # draw exactly the same amount of datapoints as in the original dataset, but with replacement\n  bootstrap_data_10 &lt;- sample_n(data_10, 10, replace=TRUE)\n  bootstrap_data_20 &lt;- sample_n(data_20, 20, replace=TRUE)\n  \n  # calculate the mean for each of the subsamples, put it into matrix in subsequent rows\n  mean_bootstrap_10[i,1] &lt;- mean(bootstrap_data_10$sweets)\n  mean_bootstrap_20[i,1] &lt;- mean(bootstrap_data_20$sweets)\n}\n\n# calculate the SEMs\nsd(mean_bootstrap_10)\n\n[1] 0.4948013\n\nsd(mean_bootstrap_20)\n\n[1] 0.4405154\n\n\nWe can conclude that the SEM is smaller with a larger sample size, which means we can be more certain about our estimate! (We already knew this from the \\(\\sqrt{n}\\) in the denominator of the SE formular but it’s nice to see it confirmed.)",
+    "text": "Resampling 3\nLet’s resample 1000 times. To get the sampling distributions of the means, we have to save each mean of each iteration:\n\nset.seed(8465123)\niterations &lt;- 1000 \n\n# initialize empty matrices\nmean_bootstrap_10 &lt;- matrix(NA, nrow = iterations, ncol = 1)\nmean_bootstrap_20 &lt;- matrix(NA, nrow = iterations, ncol = 1)\n\nfor (i in 1:iterations) {\n  # draw exactly the same amount of datapoints as in the original dataset, but with replacement\n  bootstrap_data_10 &lt;- sample_n(data_10, 10, replace=TRUE)\n  bootstrap_data_20 &lt;- sample_n(data_20, 20, replace=TRUE)\n  \n  # calculate the mean for each of the subsamples, put it into matrix in subsequent rows\n  mean_bootstrap_10[i,1] &lt;- mean(bootstrap_data_10$sweets)\n  mean_bootstrap_20[i,1] &lt;- mean(bootstrap_data_20$sweets)\n}\n\n# calculate the SEMs\nsd(mean_bootstrap_10)\n\n[1] 0.4948013\n\nsd(mean_bootstrap_20)\n\n[1] 0.3798896\n\n\nWe can conclude that the SEM is smaller with a larger sample size, which means we can be more certain about our estimate! (We already knew this from the \\(\\sqrt{n}\\) in the denominator of the SE formular but it’s nice to see it confirmed.)",
     "crumbs": [
       "06 Sampling and Resampling/Simulations"
     ]
@@ -4035,5 +4035,12 @@
     "crumbs": [
       "08 Modeling Relationships"
     ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Biostatistics",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\nSession\nDate\nTopic\nReading\nProject Deadlines\n\n\n\n\n\n14.10.\nNo class\n\nRead chapters and install software\n\n\n01\n21.10.\nGeneral & R Intro\nST21: 1-3, QF: 1-3\nR & RStudio installed\n\n\n02\n28.10.\nModels\nST21: 4, QF: 4-6\n\n\n\n03\n04.11.\nData Wrangling\nST21: 4, QF: 4-6\n\n\n\n04\n11.11.\nData Visualization\nQF: 7\n\n\n\n05\n18.11.\nProbability\nST21: 7-8, QF: 8\nDataset\n\n\n06\n25.11.\nSampling\nST21: 7-8, QF: 8\n\n\n\n07\n02.12.\nHypothesis Testing\nST21: 9-10\n\n\n\n08\n09.12.\nComparing Means & Categories\nST21: 12, 15\nResearch Question & Hypotheses\n\n\n09\n16.12.\nExercises (t-Tests, Chi²)\nST21: 12, 15\n\n\n\n10\n23.12.\n(General) Linear Models\nST21: 12-13\nFirst Analysis Ideas\n\n\n\n30.12. & 06.01.\nHolidays\n\n\n\n\n11\n13.01.\nExercises (GLM)\nST21: 12-13\n\n\n\n12\n20.01.\nLinear Mixed Models\nST21: 14\nAnalysis (with R scripts)\n\n\n13\n27.01.\nR Markdown for Reports\n\n\n\n\n14\n03.02.\nTroubleshooting Your Report\n\nSend Questions via Email\n\n\n\n10.02.\nReproducible Research\nST21: 18\nReport (with R Markdown)"
   }
 ]

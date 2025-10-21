@@ -288,24 +288,24 @@ Dr.&nbsp;Lea Hildebrandt
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">168.774</td>
-<td style="text-align: right;">9.891345</td>
+<td style="text-align: right;">168.468</td>
+<td style="text-align: right;">8.789963</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">167.674</td>
-<td style="text-align: right;">8.169725</td>
+<td style="text-align: right;">169.484</td>
+<td style="text-align: right;">9.593054</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">167.386</td>
-<td style="text-align: right;">10.753680</td>
+<td style="text-align: right;">168.804</td>
+<td style="text-align: right;">11.193602</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">167.754</td>
-<td style="text-align: right;">8.697647</td>
+<td style="text-align: right;">167.804</td>
+<td style="text-align: right;">10.836220</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">170.180</td>
-<td style="text-align: right;">10.206101</td>
+<td style="text-align: right;">170.222</td>
+<td style="text-align: right;">10.569619</td>
 </tr>
 </tbody>
 </table>
@@ -650,15 +650,15 @@ This value is the amount of time that we should allow - <em>given our assumption
 <span id="cb10-13"><a></a>cutoff <span class="ot">&lt;-</span> <span class="fu">quantile</span>(max_rand_num, <span class="fl">0.99</span>)</span>
 <span id="cb10-14"><a></a><span class="fu">print</span>(cutoff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     99% 
-8.826355 </code></pre>
+<pre><code>    99% 
+8.75769 </code></pre>
 </div>
 </div>
 </section>
 <section id="using-monte-carlo-simulations-4" class="slide level2">
 <h2>Using Monte Carlo Simulations 4</h2>
 
-<img data-src="W6_Sampling_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><p>This shows that the 99th percentile of the finishing time distribution falls at 8.8401628 minutes, meaning that if we were to give that much time for the quiz, then we expect that in 99% of quizzes, every student would finish.</p>
+<img data-src="W6_Sampling_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><p>This shows that the 99th percentile of the finishing time distribution falls at 8.8472985 minutes, meaning that if we were to give that much time for the quiz, then we expect that in 99% of quizzes, every student would finish.</p>
 <aside class="notes">
 <p>Assumptions matter, otherwise results wrong! (We assumed: normal dist w/ particular mean and SD). Here assumptions certainly wrong –&gt; elapsed time not normal</p>
 <style type="text/css">
@@ -714,11 +714,11 @@ This value is the amount of time that we should allow - <em>given our assumption
 <span id="cb12-21"><a></a></span>
 <span id="cb12-22"><a></a>SEM_standard</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.566907</code></pre>
+<pre><code>[1] 1.631241</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>SEM_bootstrap</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.543625</code></pre>
+<pre><code>[1] 1.572762</code></pre>
 </div>
 </div>
 </div><div class="column">
@@ -799,7 +799,7 @@ Model-based procedures (like most statistical tests we will cover in this class)
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">sd</span>(mean_bootstrap_20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4405154</code></pre>
+<pre><code>[1] 0.3798896</code></pre>
 </div>
 </div>
 <p>We can conclude that the SEM is smaller with a larger sample size, which means we can be more certain about our estimate! (We already knew this from the <span class="math inline">\(\sqrt{n}\)</span> in the denominator of the SE formular but it’s nice to see it confirmed.)</p>

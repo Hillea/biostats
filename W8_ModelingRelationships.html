@@ -323,15 +323,15 @@ div.cell-output-stdout {
 <p>We have two variables: Skin color (black vs white) and being pulled over (true vs.&nbsp;false). We can represent the data in a <em>contingency table</em> (remember: the <code>count()</code> function was helpful to do this in R):</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top" data-quarto-postprocess="true">
+<table class="caption-top">
 <caption>Contingency table for police search data</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">searched</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Black</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">White</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Black (relative)</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">White (relative)</th>
+<th style="text-align: left;">searched</th>
+<th style="text-align: right;">Black</th>
+<th style="text-align: right;">White</th>
+<th style="text-align: right;">Black (relative)</th>
+<th style="text-align: right;">White (relative)</th>
 </tr>
 </thead>
 <tbody>
@@ -410,15 +410,15 @@ div.cell-output-stdout {
 <p>If we compute the standardized squared difference between observed and expected values, we can sum them up to get <span class="math inline">\(\chi^2 = 828.3\)</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top" data-quarto-postprocess="true">
+<table class="caption-top">
 <caption>Contingency table for police search data</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">searched</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">driver_race</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">n</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">expected</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">stdSqDiff</th>
+<th style="text-align: left;">searched</th>
+<th style="text-align: left;">driver_race</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">expected</th>
+<th style="text-align: right;">stdSqDiff</th>
 </tr>
 </thead>
 <tbody>
@@ -489,15 +489,15 @@ X-squared = 828.3, df = 1, p-value &lt; 2.2e-16</code></pre>
 <p>Question: What is the direction of the observed relationship?</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top" data-quarto-postprocess="true">
+<table class="caption-top">
 <caption>Contingency table for police search data</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">searched</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">driver_race</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">n</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">expected</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">stdSqDiff</th>
+<th style="text-align: left;">searched</th>
+<th style="text-align: left;">driver_race</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">expected</th>
+<th style="text-align: right;">stdSqDiff</th>
 </tr>
 </thead>
 <tbody>
@@ -549,13 +549,13 @@ X-squared = 828.3, df = 1, p-value &lt; 2.2e-16</code></pre>
 <p><strong>Negative residuals</strong> indicate an observed value <strong>smaller</strong> than expected.</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top" data-quarto-postprocess="true">
+<table class="caption-top">
 <caption>Summary of standardized residuals for police stop data</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">searched</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">driver_race</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Standardized residuals</th>
+<th style="text-align: left;">searched</th>
+<th style="text-align: left;">driver_race</th>
+<th style="text-align: right;">Standardized residuals</th>
 </tr>
 </thead>
 <tbody>
@@ -890,7 +890,7 @@ sample estimates:
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="images/dag_latent_example.png" width="350"></p>
+<p><img data-src="images/dag_latent_example.png"></p>
 </figure>
 </div>
 </div>

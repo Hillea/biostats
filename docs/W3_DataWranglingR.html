@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
-  <meta name="author" content="Dr.&nbsp;Mario Reutter (slides adapted from Dr.&nbsp;Lea Hildebrandt)">
+  <meta name="author" content="Dr.&nbsp;Lea Hildebrandt">
   <title>Biostatistics – 03 Data Wrangling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -204,7 +204,7 @@ Translational Neuroscience</div><p></p>
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Dr.&nbsp;Mario Reutter (slides adapted from Dr.&nbsp;Lea Hildebrandt) 
+Dr.&nbsp;Lea Hildebrandt 
 </div>
 </div>
 </div>
@@ -588,7 +588,6 @@ Remember that you can run <code>?select</code> in the console if you need help a
 <span id="cb29-8"><a></a>  babynames <span class="sc">%&gt;%</span> </span>
 <span id="cb29-9"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>n) <span class="co"># remove columns by using -</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Removing columns vs.&nbsp;selecting columns: Results may change if the data get updated!</p>
 
 <aside class="notes">
 <p>Similar to optional spaces for better readability, R allows for optional line breakes. You can try out what works best for you or look up some style guides.</p>
@@ -605,7 +604,7 @@ Remember that you can run <code>?select</code> in the console if you need help a
       }</style></aside>
 </div>
 <aside><div>
-<p>It is encouraged to use many line breakes for better readability. Check out the <u><a href="https://style.tidyverse.org/syntax.html#long-lines">Tidyverse Style Guide</a></u> for suggestions.</p>
+<p>It is encouraged to use many line breaks for better readability. Check out the <u><a href="https://style.tidyverse.org/syntax.html#long-lines">Tidyverse Style Guide</a></u> for suggestions.</p>
 </div></aside></section>
 <section id="arranging-data" class="slide level2 scrollable">
 <h2>Arranging Data</h2>
@@ -900,16 +899,16 @@ Also, there are slight differences between <code>&lt;-</code> and <code>=</code>
 <pre><code># A tibble: 10 × 2
     year decade
    &lt;dbl&gt;  &lt;dbl&gt;
- 1  1900   1900
- 2  1914   1910
- 3  1931   1930
- 4  1943   1940
- 5  1946   1940
- 6  1949   1940
- 7  1952   1950
- 8  1964   1960
- 9  1988   1980
-10  2017   2010</code></pre>
+ 1  1882   1880
+ 2  1936   1930
+ 3  1950   1950
+ 4  1955   1950
+ 5  1959   1950
+ 6  1960   1960
+ 7  1970   1970
+ 8  1980   1980
+ 9  1989   1980
+10  2014   2010</code></pre>
 </div>
 </div>
 </div>
@@ -1006,8 +1005,8 @@ There’s just one row in the resulting data frame, because <code>summarize()</c
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>group_sum <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(name) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">total =</span> <span class="fu">sum</span>(n)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We avoid using <code>group_by()</code> like this because it can have unintended side effects.<br>
-It is just part of this class because you will likely encounter it in somebody else’s (old) code.<br>
-<br>
+</p>
+<p><br>
 If you do have to use it, make sure to <code>ungroup()</code> after <code>summarize()</code> (or <code>mutate()</code>) to avoid unintended effects:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a>group_sum <span class="ot">&lt;-</span> dat <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(name) <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">total =</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span>
@@ -1219,7 +1218,7 @@ there are (usually) several rows per participant</p>
 <td>195</td>
 </tr>
 <tr class="even">
-<td>a3</td>
+<td>a2</td>
 <td>2</td>
 <td>220</td>
 </tr>
@@ -1416,7 +1415,7 @@ If you want to convert <code>Time</code> from milliseconds into seconds, what do
 :::
 -->
 <aside class="notes">
-<p>The second table is the tidyest!</p>
+<p>The second table is the tidiest!</p>
 <p>Table 1 has cases and population mixed together in <code>count</code> variable.<br>
 Table 3 mixes them in an awkward character row <code>rate</code>.<br>
 Table 4 is standard wide format.</p>
@@ -2070,7 +2069,7 @@ $ BlockNumber     &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/Hillea\.github\.io\/biostats\/");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

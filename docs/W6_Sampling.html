@@ -288,24 +288,24 @@ Dr.&nbsp;Lea Hildebrandt
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">168.278</td>
-<td style="text-align: right;">8.709209</td>
+<td style="text-align: right;">168.370</td>
+<td style="text-align: right;">11.505478</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">167.846</td>
-<td style="text-align: right;">10.895744</td>
+<td style="text-align: right;">169.050</td>
+<td style="text-align: right;">9.484321</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">168.564</td>
-<td style="text-align: right;">10.803755</td>
+<td style="text-align: right;">168.840</td>
+<td style="text-align: right;">9.853063</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">169.278</td>
-<td style="text-align: right;">9.233464</td>
+<td style="text-align: right;">168.274</td>
+<td style="text-align: right;">9.228567</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">167.760</td>
-<td style="text-align: right;">10.387866</td>
+<td style="text-align: right;">166.854</td>
+<td style="text-align: right;">12.152151</td>
 </tr>
 </tbody>
 </table>
@@ -651,14 +651,14 @@ This value is the amount of time that we should allow - <em>given our assumption
 <span id="cb10-14"><a></a><span class="fu">print</span>(cutoff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     99% 
-8.791655 </code></pre>
+8.847807 </code></pre>
 </div>
 </div>
 </section>
 <section id="using-monte-carlo-simulations-4" class="slide level2">
 <h2>Using Monte Carlo Simulations 4</h2>
 
-<img data-src="W6_Sampling_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><p>This shows that the 99th percentile of the finishing time distribution falls at 8.8083895 minutes, meaning that if we were to give that much time for the quiz, then we expect that in 99% of quizzes, every student would finish.</p>
+<img data-src="W6_Sampling_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><p>This shows that the 99th percentile of the finishing time distribution falls at 8.7458473 minutes, meaning that if we were to give that much time for the quiz, then we expect that in 99% of quizzes, every student would finish.</p>
 <aside class="notes">
 <p>Assumptions matter, otherwise results wrong! (We assumed: normal dist w/ particular mean and SD). Here assumptions certainly wrong –&gt; elapsed time not normal</p>
 <style type="text/css">
@@ -714,11 +714,11 @@ This value is the amount of time that we should allow - <em>given our assumption
 <span id="cb12-21"><a></a></span>
 <span id="cb12-22"><a></a>SEM_standard</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.921616</code></pre>
+<pre><code>[1] 1.982035</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>SEM_bootstrap</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.884266</code></pre>
+<pre><code>[1] 1.898898</code></pre>
 </div>
 </div>
 </div><div class="column">
@@ -799,7 +799,7 @@ Model-based procedures (like most statistical tests we will cover in this class)
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">sd</span>(mean_bootstrap_20)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4900853</code></pre>
+<pre><code>[1] 0.4671166</code></pre>
 </div>
 </div>
 <p>We can conclude that the SEM is smaller with a larger sample size, which means we can be more certain about our estimate! (We already knew this from the <span class="math inline">\(\sqrt{n}\)</span> in the denominator of the SE formular but it’s nice to see it confirmed.)</p>

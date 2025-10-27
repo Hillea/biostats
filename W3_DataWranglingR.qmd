@@ -277,10 +277,10 @@ babynames_reduced <-
   select(-n) # remove columns by using -
 ```
 
-Removing columns vs. selecting columns: Results may change if the data get updated!
+
 
 ::: aside
-It is encouraged to use many line breakes for better readability. Check out the <u>[Tidyverse Style Guide](https://style.tidyverse.org/syntax.html#long-lines)</u> for suggestions.
+It is encouraged to use many line breaks for better readability. Check out the <u>[Tidyverse Style Guide](https://style.tidyverse.org/syntax.html#long-lines)</u> for suggestions.
 :::
 
 
@@ -621,7 +621,7 @@ group_sum <- dat %>% group_by(name) %>% summarize(total = sum(n))
 ```
 
 We avoid using `group_by()` like this because it can have unintended side effects. \
-It is just part of this class because you will likely encounter it in somebody else's (old) code. \
+
 \
 If you do have to use it, make sure to `ungroup()` after `summarize()` (or `mutate()`) to avoid unintended effects:
 ```{r}
@@ -757,7 +757,7 @@ there are (usually) several rows per participant
 | a1  | 1    | 230   |
 | a1  | 2    | 310   |
 | a2  | 1    | 195   |
-| a3  | 2    | 220   |
+| a2  | 2    | 220   |
 | a3  | 1    | 245   |
 | a3  | 2    | 290   |
 :::
@@ -895,7 +895,7 @@ left_join(table4a, table4b, by="country", suffix=c("_cases", "_population"))
 -->
 
 ::: notes
-The second table is the tidyest!
+The second table is the tidiest!
 
 Table 1 has cases and population mixed together in `count` variable. \
 Table 3 mixes them in an awkward character row `rate`. \

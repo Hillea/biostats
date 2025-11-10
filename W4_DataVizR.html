@@ -395,7 +395,7 @@ Levels: 1 2 3 4 5</code></pre>
 </div></aside></section>
 <section id="set-labels-1" class="slide level2">
 <h2>Set labels</h2>
-<p><code>match_case()</code> allows us to label our numeric data with more human-readable descriptions. <code>if_else()</code> is a useful shorthand for cases where we only have two categories.</p>
+<p><code>case_match()</code> or <code>case_when()</code> (or simply <code>recode()</code>) allow us to label our numeric data with more human-readable descriptions. <code>if_else()</code> is a useful shorthand for cases where we only have two categories.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12" data-code-line-numbers="5-13|4|14-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>summarydata2 <span class="ot">&lt;-</span> </span>
 <span id="cb12-2"><a></a>  summarydata <span class="sc">%&gt;%</span> </span>
@@ -920,7 +920,7 @@ Levels: low middle high</code></pre>
 <div class="fragment">
 <p><strong>Next:</strong></p>
 <ul>
-<li>Sampling</li>
+<li>Theory: Probability &amp; Sampling</li>
 </ul>
 
 

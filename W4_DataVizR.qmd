@@ -187,7 +187,7 @@ There is very sparse information on the variables at <https://doi.org/10.5334/jo
 
 ## Set labels
 
-`match_case()` allows us to label our numeric data with more human-readable descriptions. `if_else()` is a useful shorthand for cases where we only have two categories.
+`case_match()` or `case_when()` (or simply `recode()`) allow us to label our numeric data with more human-readable descriptions. `if_else()` is a useful shorthand for cases where we only have two categories.
 
 ```{r}
 #| echo: true
@@ -662,4 +662,4 @@ You can also check out the [R Graph Gallery](https://r-graph-gallery.com/) for c
 
 **Next:**
 
--   Sampling
+-   Theory: Probability & Sampling

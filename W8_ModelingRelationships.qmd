@@ -4,7 +4,7 @@ subtitle: |
    | Julius-Maximilians-University Würzburg 
    | Course: "Biostatistics"    
    | Translational Neuroscience
-author: "Dr. Mario Reutter (slides adapted from Dr. Lea Hildebrandt)"
+author: "Dr. Lea Hildebrandt"
 format: 
   revealjs:
     smaller: true
@@ -366,7 +366,7 @@ The Simpson's Paradox is a great example of misleading summaries.
 If we look at the baseball data below, we see that David Justice has a better batting average in every single year, but Derek Jeter has a better overall batting average:
 
 | Player  | 1995    |          | 1996    |          | 1997    |          | Combined |          |
-|---------|---------|----------|---------|----------|---------|----------|----------|----------|
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | Jeter   | 12/48   | .250     | 183/582 | .314     | 190/654 | .291     | 385/1284 | **.300** |
 | Justice | 104/411 | **.253** | 45/140  | **.321** | 163/495 | **.329** | 312/1046 | .298     |
 

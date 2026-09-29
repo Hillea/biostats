@@ -62,7 +62,7 @@ Now that we have covered the basics, we will apply them and turn to the question
 
 ## Chi² Test: General
 
-We will first focus on modeling *categorical* relationships (i.e., of variables that are qualitative!).
+We will first focus on modeling *categorical* relationships.
 
 . . .
 

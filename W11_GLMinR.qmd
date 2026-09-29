@@ -42,6 +42,7 @@ library(see)
 library(performance)
 library(report)
 library(tidyverse)
+library(here)
 ```
 
 In a previous session, you have used **one-way ANOVAs** to analyze data where we were interested in differences between levels of one factor (between-subjects groups) on a continuous dependent variable.
@@ -84,7 +85,7 @@ Replace the "NULLs" to achieve all this step by step...
 ```{r}
 #| eval: false
 #| echo: true
-zhang_data2 <- read_csv("Zhang et al. 2014 Study 3.csv") %>% 
+zhang_data2 <- read_csv("Data/Zhang et al. 2014 Study 3.csv") %>% 
   select(NULL, NULL, NULL) %>% 
   mutate(subject = NULL) %>% 
   NULL(names_to = "time", values_to = "interest", 

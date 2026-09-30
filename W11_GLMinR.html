@@ -262,7 +262,7 @@ div.cell-output-stdout {
 </ul>
 <p>Replace the “NULLs” to achieve all this step by step…</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>zhang_data2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Zhang et al. 2014 Study 3.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>zhang_data2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/Zhang et al. 2014 Study 3.csv"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb1-2"><a></a>  <span class="fu">select</span>(<span class="cn">NULL</span>, <span class="cn">NULL</span>, <span class="cn">NULL</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb1-3"><a></a>  <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="cn">NULL</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb1-4"><a></a>  <span class="cn">NULL</span>(<span class="at">names_to =</span> <span class="st">"time"</span>, <span class="at">values_to =</span> <span class="st">"interest"</span>, </span>

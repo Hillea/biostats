@@ -141,25 +141,25 @@ Slides might be text heavy → so that you can go through the slides afterwards 
 
 The up-to-date version can be found at <https://hillea.github.io/biostats/>.
 
-| Session | Date | Topic | Reading | Project Deadlines |
-|----|----|----|----|----|
-|  | 14.10. | *No class* |  | Read chapters and install software |
-| 01 | 21.10. | General & R Intro | ST21: 1-3, QF: 1-3 | R & RStudio installed |
-| 02 | 28.10. | Models | ST21: 4, QF: 4-6 |  |
-| 03 | 04.11. | Data Wrangling | ST21: 4, QF: 4-6 |  |
-| 04 | 11.11. | Data Visualization | QF: 7 |  |
-| 05 | 18.11. | Probability | ST21: 7-8, QF: 8 | Dataset |
-| 06 | 25.11. | Sampling | ST21: 7-8, QF: 8 |  |
-| 07 | 02.12. | Hypothesis Testing | ST21: 9-10 |  |
-| 08 | 09.12. | Comparing Means & Categories | ST21: 12, 15 | Research Question & Hypotheses |
-| 09 | 16.12. | Exercises (t-Tests, Chi²) | ST21: 12, 15 |  |
-| 10 | 23.12. | (General) Linear Models | ST21: 12-13 | First Analysis Ideas |
-|  | 30.12. & 06.01. | *Holidays* |  |  |
-| 11 | 13.01. | Exercises (GLM) | ST21: 12-13 |  |
-| 12 | 20.01. | Linear Mixed Models | ST21: 14 | Analysis (with R scripts) |
-| 13 | 27.01. | R Markdown for Reports |  |  |
-| 14 | 03.02. | Troubleshooting Your Report |  | Send Questions via Email |
-|  |  | ~~Reproducible Research~~ | ~~ST21: 18~~ | Report (with R Markdown) |
+| Session | Topic | Reading | Project Deadlines |
+|---------------|---------------|---------------|---------------|
+|  | *No class* |  | Read chapters and install software |
+| 01 | General & R Intro | ST21: 1-3, QF: 1-3 | R & RStudio installed |
+| 02 | Models | ST21: 4, QF: 4-6 |  |
+| 03 | Data Wrangling | ST21: 4, QF: 4-6 |  |
+| 04 | Data Visualization | QF: 7 |  |
+| 05 | Probability | ST21: 7-8, QF: 8 | Dataset |
+| 06 | Sampling | ST21: 7-8, QF: 8 |  |
+| 07 | Hypothesis Testing | ST21: 9-10 |  |
+| 08 | Comparing Means & Categories | ST21: 12, 15 | Research Question & Hypotheses |
+| 09 | Exercises (t-Tests, Chi²) | ST21: 12, 15 |  |
+| 10 | (General) Linear Models | ST21: 12-13 | First Analysis Ideas |
+|  | *Holidays* |  |  |
+| 11 | Exercises (GLM) | ST21: 12-13 |  |
+| 12 | Linear Mixed Models | ST21: 14 | Analysis (with R scripts) |
+| 13 | R Markdown for Reports |  |  |
+| 14 | Troubleshooting Your Report |  | Send Questions via Email |
+|  | ~~Reproducible Research~~ | ~~ST21: 18~~ | Report (with R Markdown) |
 
 ::: aside
 ST21: Statistical Thinking for the 21st Century\

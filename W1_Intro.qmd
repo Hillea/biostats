@@ -142,7 +142,7 @@ Slides might be text heavy → so that you can go through the slides afterwards 
 The up-to-date version can be found at <https://hillea.github.io/biostats/>.
 
 | Session | Topic | Reading | Project Deadlines |
-|---------------|---------------|---------------|---------------|
+|----|----|----|----|
 |  | *No class* |  | Read chapters and install software |
 | 01 | General & R Intro | ST21: 1-3, QF: 1-3 | R & RStudio installed |
 | 02 | Models | ST21: 4, QF: 4-6 |  |
